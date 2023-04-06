@@ -33,3 +33,8 @@ printTest("clear", () => {
   studentStack.clear()
   console.log(studentStack)
 })
+// 栈是否为空
+printTest("isEmpty", () => {
+  const isEmpty = studentStack.isEmpty()
+  console.log(isEmpty)
+})
