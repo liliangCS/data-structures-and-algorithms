@@ -1,7 +1,7 @@
 class Stack {
   private items: Array<any>
-  constructor(items: Array<any>) {
-    this.items = items
+  constructor(items?: Array<any>) {
+    this.items = items ? items : []
   }
   // 向栈中添加一个元素
   public push(element: any) {
@@ -28,6 +28,12 @@ class Stack {
   // 判断栈是否为空
   public isEmpty() {
     return this.items.length === 0
+  }
+  // 遍历栈中元素，从栈顶到栈底
+  public forEach(callback: (item: any) => void) {
+    for (let i = this.size() - 1; i >= 0; i--) {
+      callback(this.items[i])
+    }
   }
 }
 
